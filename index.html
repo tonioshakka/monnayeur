@@ -1,28 +1,28 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>Monnaie</title>
-    <script src="monnaie.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    
+    <img src="img/logo.png" alt="Logo Le Temple Du Jeu"><br>
+    <div>
+        <label for="montantDu">Entrez le montant dû en euros :</label>
+        <input type="number" id="montantDu" step="0.01" min="0.01" autofocus="autofocus">
+    </div>
+    <div>
+        <label for="montantRecu">Entrez le montant reçu en euros :</label>
+        <input type="number" id="montantRecu" step="0.01" min="0.01">
+    </div>
+    <br>
+    <button onclick="calculerMonnaie()">Calculer la monnaie</button><br><br>
+    <div id="monnaieArendre"></div><br>
+    <div id="detailsMonnaie"></div>
 
-<div id="montantDu"></div>
-
-<div id="montantRecu"></div>
-
-<div id="monnaieArendre"></div>
-
-
-
-
-
-
-
+    <script src="monnaie.js"></script>
 </body>
-
-
 
 </html>
