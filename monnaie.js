@@ -33,6 +33,9 @@ function askForAmountReceived(montantDu) {
 
 function rendreMonnaie(monnaie) {
     const monnaiePieces = {
+        50000: 0,
+        20000: 0,
+        10000: 0,
         5000: 0,
         2000: 0,
         1000: 0,
@@ -53,7 +56,9 @@ function rendreMonnaie(monnaie) {
             monnaie -= value; //à chaque ajout d'un billet (ou pièce) on soustrait sa valeur du montant
         }
     });
-
+monnaiePieces.forEach(element => {
+    
+});
     console.log(`${monnaiePieces[5000]} billet(s) de 50€`);
     console.log(`${monnaiePieces[2000]} billet(s) de 20€`);
     console.log(`${monnaiePieces[1000]} billet(s) de 10€`);
