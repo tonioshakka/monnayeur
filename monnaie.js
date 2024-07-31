@@ -46,17 +46,15 @@ function calculerMonnaie() {
         1: "pièce(s) de 0.01€"
     };
 
+   let details = '';
+
     Object.keys(monnaiePieces).reverse().forEach(value => {
         while (monnaie >= value) {
             monnaiePieces[value]++;
             monnaie -= value;
         }
-    });
-
-    let details = '';
-    Object.keys(monnaiePieces).reverse().forEach(key => {
-        if (monnaiePieces[key] > 0) {
-            details += `${monnaiePieces[key]} ${denominations[key]}<br>`;
+        if (monnaiePieces[value] > 0) {
+            details += `${monnaiePieces[value]} ${denominations[value]}<br>`;
         }
     });
 
